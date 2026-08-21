@@ -1,0 +1,122 @@
+.lg {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg);
+}
+
+.lg-aside {
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--sidebar-bg);
+  color: #fff;
+}
+
+.lg-aside .brand-logo-name { color: #fff; }
+.lg-aside .brand-logo-tag { color: var(--sidebar-text); }
+.lg-aside .brand-logo-mark { color: var(--primary); }
+
+.lg-aside h1 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  max-width: 16ch;
+  margin-top: 40px;
+}
+
+.lg-aside p {
+  margin-top: 16px;
+  color: var(--sidebar-text);
+  max-width: 34ch;
+  font-size: 15px;
+}
+
+.lg-team {
+  margin-top: 32px !important;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+.lg-main {
+  display: grid;
+  place-items: center;
+  padding: 40px 28px;
+}
+
+.lg-card {
+  width: min(400px, 100%);
+}
+
+.lg-card h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 4px 0 6px;
+}
+
+.lg-error {
+  margin: 14px 0 6px;
+  color: var(--danger);
+  font-size: 14px;
+}
+
+.lg-pass { position: relative; }
+.lg-pass .ui-input { padding-right: 40px; }
+
+.lg-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 18px;
+  font-size: 14px;
+}
+
+.lg-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.lg-submit { width: 100%; height: 40px; margin-top: 4px; }
+
+.lg-forgot {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.lg-demo {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.lg-demo-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  font-size: 13.5px;
+  transition: border-color 0.12s ease;
+}
+
+.lg-demo-btn span:last-child { color: var(--faint); font-size: 12.5px; }
+.lg-demo-btn:hover { border-color: var(--primary-muted); }
+
+@media (max-width: 860px) {
+  .lg { grid-template-columns: 1fr; }
+  .lg-aside { display: none; }
+  .lg-main { padding: 32px 20px; }
+}

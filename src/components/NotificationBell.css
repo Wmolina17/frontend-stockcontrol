@@ -1,0 +1,110 @@
+.nb-wrap { position: relative; }
+
+.nb-btn {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+
+.nb-btn:hover,
+.nb-btn.open {
+  color: var(--primary);
+  border-color: var(--primary-muted);
+}
+
+.nb-badge {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+}
+
+.nb-scrim { position: fixed; inset: 0; z-index: 40; }
+
+.nb-panel {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 320px;
+  max-width: 90vw;
+  max-height: 400px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nb-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.nb-panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.nb-mark-all {
+  border: 0;
+  background: none;
+  font-size: 12px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.nb-mark-all:disabled { opacity: 0.4; }
+
+.nb-list { overflow-y: auto; }
+
+.nb-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.nb-item:hover { background: var(--surface-hover); }
+.nb-item.unread { background: var(--primary-soft); }
+
+.nb-item-body { flex: 1; min-width: 0; }
+.nb-item-top { display: flex; justify-content: space-between; gap: 8px; }
+.nb-item-title { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.nb-item-time,
+.nb-item-desc { font-size: 12px; color: var(--muted); }
+.nb-item-desc { margin-top: 2px; }
+
+.nb-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nb-empty { padding: 28px 14px; color: var(--muted); font-size: 13px; text-align: center; }
